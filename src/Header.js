@@ -4,10 +4,17 @@ import SearchIcon from '@mui/icons-material/Search';
 import cart from './cart.png'
 import { Link } from 'react-router-dom';
 import { useStateValue } from "./StateProvider";
+import { auth } from "./Firebase";
 
 export default function Header(){
 
-    const [{basket}, dispatch] = useStateValue()
+    const [{basket, user}, dispatch] = useStateValue()
+
+    const handleAuth = () => {
+        if (user) {
+            auth.signOut()
+        }
+    }
 
     return (
         <div className="header">
@@ -29,10 +36,12 @@ export default function Header(){
                 <SearchIcon className="header--searchIcon"/>
             </div>
             <div className="header--nav">
-                <div className="header--option box--effect">
-                    <span className="header--optionLineOne">Hello Guest</span>
-                    <span className="header--optionLineTwo">Sign In</span>
-                </div>
+                <Link to={!user && '/login'}>
+                    <div className="header--option box--effect" onClick={handleAuth}>
+                        <span className="header--optionLineOne">Hello {user ? user.email.split('@')[0] : 'Guest'}</span>
+                        <span className="header--optionLineTwo">{user ? 'Sign Out':'Sign In'}</span>
+                    </div>
+                </Link>
 
                 <div className="header--option box--effect">
                     <span className="header--optionLineOne">Returns</span>

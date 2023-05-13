@@ -7,7 +7,7 @@ export default function Subtotal(){
 
     const [{basket}, dispatch] = useStateValue()
 
-    const totalPrice = basket?.reduce((total, item) => total + item.price, 0)
+    const totalPrice = basket?.reduce((total, item) => total + (item.isChecked ? item.price : 0), 0)
 
     return (
         <div className="subtotal">

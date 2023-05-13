@@ -6,7 +6,7 @@ import { useStateValue } from "./StateProvider";
 
 export default function Checkout(){
 
-    const [{basket}, dispatch] = useStateValue()
+    const [{basket, user}, dispatch] = useStateValue()
     const checoutProducts = basket.map((item) => (
         <CheckOutProduct item={item}/>
     ))

@@ -128,16 +128,9 @@
 }
 
 .separator--vLine{
-    width: 10px;
-    height: 100%;
-    background: #f02929;
-}
-
-.separator--hLine{
-    border-left: 1px solid black;
-    height: 100px;
-    width: 400px;
-    background-color: #000000;
+    border-left: 1px solid lightgray;
+    padding-left: 10px;
+    margin-left: 10px;
 }
 
 .checkoutProduct--rating{
@@ -148,4 +141,4 @@
 
 input[type="checkbox"]:checked {
     background-color: rgb(255, 255, 255);
-  }
+}

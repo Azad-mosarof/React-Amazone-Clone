@@ -71,12 +71,15 @@
 }
 
 .header--optionLineOne{
-    font-size: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: sans-serif;
 }
 
 .header--optionLineTwo{
     font-size: 13px;
     font-weight: 800;
+    text-decoration: none;
 }
 
 .header--optionBasket{

@@ -4,17 +4,22 @@ import { useStateValue } from "./StateProvider";
 
 export default function CheckOutProduct(props){
 
+    const [{basket}, dispatch] = useStateValue()
     const [isChecked, setIsChecked] = useState(true);
 
     function handleCheckboxChange(event) {
-      setIsChecked(event.target.checked);
+        setIsChecked(event.target.checked);
+        //update the isChecked state
+        dispatch({
+            type: "UPDATE_CHECKBOX",
+            id: props.item.id,
+            isChecked: event.target.checked
+        })
     }
   
     const checkboxStyle = {
       backgroundColor: isChecked ? 'blue' : 'transparent',
     };
-
-    const [{basket}, dispatch] = useStateValue()
 
     function deleteFromBusket(){
         dispatch({ 
@@ -47,7 +52,6 @@ export default function CheckOutProduct(props){
                     {Array(props.item.rating).fill().map((_, i) => (
                         <p>⭐</p>
                     ))}
-                    {console.log(Array(props.item.rating))}
                 </div>
 
                 <p className="checkoutProduct--instock">In stock</p>
@@ -72,14 +76,10 @@ export default function CheckOutProduct(props){
                         </select>
                     </div>
 
-                    <div classname="separator--vLine"></div>
-                    <h5 onClick={deleteFromBusket}>Delete</h5>
-                    <div classname="separator--vLine"></div>
-                    <h5>Save for later</h5>
-                    <div classname="separator--vLine"></div>
-                    <h5>See more like this</h5>
-                    <div classname="separator--vLine"></div>
-                    <h5>Share</h5>
+                    <h5 className="separator--vLine" onClick={deleteFromBusket}>Delete</h5>
+                    <h5 className="separator--vLine">Save for later</h5>
+                    <h5 className="separator--vLine">See more like this</h5>
+                    <h5 className="separator--vLine">Share</h5>
                 </div>
 
             </div>
