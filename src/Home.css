@@ -1,0 +1,35 @@
+.home{
+    width: 100%;
+    height: 100%;
+    background-color: #e3e6e6;
+}
+
+.home--container{
+    width: 1500px;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.home--image{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    margin-top: -1px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.home--row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-row-product{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin:auto;
+    margin-top: -170px;
+}

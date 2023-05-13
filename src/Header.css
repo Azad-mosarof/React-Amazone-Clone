@@ -1,0 +1,111 @@
+.header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+/* .header--searchSelect{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    background-color: white;
+    color: #cd9042;
+} */
+
+.header--searchSelect{
+    height: 12px;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin-right: -1px;
+    background-color: rgb(255, 255, 255);
+    color: #cd9042;
+    padding: 13px;
+    border-radius: 24px 0px 0px 24px;
+}
+
+.header--select{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    border: none;
+    background-color: white;
+}
+
+.header--logo{
+    width: 140px;
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 8px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.header--search{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header--searchInput{
+    height: 12px;
+    padding: 13px;
+    border: none;
+    width: 100%;
+}
+
+.header--searchIcon{
+    padding: 8px;
+    height: 22px !important;
+    background-color: #cd9042;
+    border-radius: 0 24px 24px 0;
+}
+
+.header--optionLineOne{
+    font-size: 10px;
+}
+
+.header--optionLineTwo{
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.header--optionBasket{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 5px;
+}
+
+.header--basketCount{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header--nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header--option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.box--effect:hover{
+    border: #deeafa 1px solid;
+}
