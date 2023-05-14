@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Amazone-Clone/static/css/main.861900dc.css",
+    "main.js": "/React-Amazone-Clone/static/js/main.71d752f4.js",
+    "static/js/787.0e50cc05.chunk.js": "/React-Amazone-Clone/static/js/787.0e50cc05.chunk.js",
+    "index.html": "/React-Amazone-Clone/index.html",
+    "main.861900dc.css.map": "/React-Amazone-Clone/static/css/main.861900dc.css.map",
+    "main.71d752f4.js.map": "/React-Amazone-Clone/static/js/main.71d752f4.js.map",
+    "787.0e50cc05.chunk.js.map": "/React-Amazone-Clone/static/js/787.0e50cc05.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.861900dc.css",
+    "static/js/main.71d752f4.js"
+  ]
+}
